@@ -24,6 +24,8 @@ app.use(
   })
 );
 
+app.options("*", cors());
+
 // Parse JSON
 app.use(express.json());
 
