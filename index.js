@@ -14,7 +14,11 @@ dotenv.config();
 connectDB();
 
 const app = express();
-
+const allowedOrigins = [
+  process.env.FRONTEND_URL,         // deployed Netlify frontend
+  "http://localhost:3000",          // React dev server
+  "http://127.0.0.1:3000"           // alternate local
+];
 // Enable CORS
 app.use(
   cors({
