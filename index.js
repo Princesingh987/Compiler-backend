@@ -57,7 +57,7 @@ connectDB();
 
 const app = express();
 
-// ✅ CORS setup
+
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
@@ -75,4 +75,4 @@ app.use("/api/compile", compileRoutes);
 app.use("/api/users", userRoutes);
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
