@@ -70,7 +70,6 @@ app.options("*", cors());
 // ✅ Middleware
 app.use(express.json());
 
-// ✅ Route mounting (only prefixes here — NO full URLs!)
 app.use("/api/auth", authRoutes);
 app.use("/api/compile", compileRoutes);
 app.use("/api/users", userRoutes);
